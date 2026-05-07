@@ -21,11 +21,11 @@ export const PRODUCTS: Product[] = [
       "Mousse Energy Surge ultralégère",
       "Semelle Contagrip All-Terrain"
     ],
-    imageUrl: "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?q=80&w=800&auto=format&fit=crop"
+    imageUrl: "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?q=80&w=800&auto=format&fit=crop&grayscale=true"
   },
   {
-    id: "xt-6-black",
-    name: "XT-6",
+    id: "xt-6-sky",
+    name: "XT-6 'Breeze'",
     category: "Sportstyle",
     price: "€180.00",
     description: "L'icône du trail running réimaginée pour la ville. Un mélange parfait de performance technique et de design minimaliste.",
@@ -34,7 +34,7 @@ export const PRODUCTS: Product[] = [
       "Amorti EVA double densité",
       "Construction SensiFit™ sécurisée"
     ],
-    imageUrl: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=800&auto=format&fit=crop"
+    imageUrl: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=800&auto=format&fit=crop&grayscale=true"
   },
   {
     id: "xt-6-gtx",
@@ -47,7 +47,7 @@ export const PRODUCTS: Product[] = [
       "Pare-boue protecteur",
       "Châssis ACS stable"
     ],
-    imageUrl: "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?q=80&w=800&auto=format&fit=crop"
+    imageUrl: "https://images.unsplash.com/photo-1608231387042-66d1773070a5?q=80&w=800&auto=format&fit=crop&grayscale=true"
   },
   {
     id: "xt-whisper",
@@ -61,8 +61,9 @@ export const PRODUCTS: Product[] = [
       "Lignes de design épurées",
       "Confort quotidien supérieur"
     ],
-    imageUrl: "https://images.unsplash.com/photo-1539185441755-769473a23570?q=80&w=800&auto=format&fit=crop"
-  },
+    imageUrl: "https://images.unsplash.com/photo-1511499767390-9034268e3bf5?q=80&w=800&auto=format&fit=crop&grayscale=true"
+  }
+,
   {
     id: "xt-4-og",
     name: "XT-4 OG",
@@ -74,7 +75,7 @@ export const PRODUCTS: Product[] = [
       "Semelle externe géométrique",
       "Coloris archives authentiques"
     ],
-    imageUrl: "https://images.unsplash.com/photo-1549298916-b41d501d3772?q=80&w=800&auto=format&fit=crop"
+    imageUrl: "https://images.unsplash.com/photo-1556906781-9a412961c28c?q=80&w=800&auto=format&fit=crop&grayscale=true"
   },
   {
     id: "xa-pro-3d",
@@ -87,7 +88,7 @@ export const PRODUCTS: Product[] = [
       "GORE-TEX imperméable",
       "Renfort pare-pierres ultra-robuste"
     ],
-    imageUrl: "https://images.unsplash.com/photo-1520639889313-727216af39ae?q=80&w=800&auto=format&fit=crop"
+    imageUrl: "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?q=80&w=800&auto=format&fit=crop&grayscale=true"
   }
 ];
 

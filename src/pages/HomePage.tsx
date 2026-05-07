@@ -11,12 +11,12 @@ export function HomePage() {
       <section className="relative h-[90vh] flex flex-col justify-end px-6 pb-32 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1551632811-561732d1e306?q=80&w=1920&auto=format&fit=crop" 
-            alt="Gravel Running" 
-            className="w-full h-full object-cover opacity-80"
+            src="https://images.unsplash.com/photo-1538370621607-4919ce7889b3?q=80&w=1920&auto=format&fit=crop&grayscale=true" 
+            alt="Elite Performance" 
+            className="w-full h-full object-cover opacity-90 scale-105"
             referrerPolicy="no-referrer"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent " />
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent " />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto w-full">
@@ -67,12 +67,59 @@ export function HomePage() {
         </div>
       </section>
 
+      {/* Modern Category Grid - Inspired by UVU aesthetic */}
+      <section className="px-6 py-20 bg-zinc-950">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { 
+                name: 'Gravel running', 
+                img: 'https://images.unsplash.com/photo-1551632811-561732d1e306?q=80&w=800&auto=format&fit=crop&grayscale=true',
+                desc: 'Allez plus loin que l’asphalte, avec la puissance des plaques carbone.'
+              },
+              { 
+                name: 'Trail running', 
+                img: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=800&auto=format&fit=crop&grayscale=true',
+                desc: 'Liberté absolue sur les sentiers les plus techniques.'
+              },
+              { 
+                name: 'Course à pied', 
+                img: 'https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?q=80&w=800&auto=format&fit=crop&grayscale=true',
+                desc: 'Performance urbaine redéfinie pour la vitesse pure.'
+              },
+              { 
+                name: 'Randonnée', 
+                img: 'https://images.unsplash.com/photo-1501555088652-021faa106b9b?q=80&w=800&auto=format&fit=crop&grayscale=true',
+                desc: 'Dominez les sommets avec un équipement sans compromis.'
+              }
+            ].map((cat, i) => (
+              <Link key={cat.name} to="/collection" className="group relative aspect-[3/4] overflow-hidden rounded-xl">
+                <img 
+                  src={cat.img} 
+                  alt={cat.name} 
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
+                  referrerPolicy="no-referrer"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+                <div className="absolute top-6 left-6">
+                  <h3 className="text-xl font-bold text-white uppercase tracking-tight">{cat.name}</h3>
+                </div>
+                <div className="absolute bottom-6 left-6 right-6 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                  <p className="text-xs font-medium text-white/70 mb-4">{cat.desc}</p>
+                  <span className="text-[10px] font-black uppercase tracking-widest border-b border-white pb-1">Découvrir</span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Featured Banners - SS26 Quest 5 */}
       <section className="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/5">
-        <div className="relative aspect-square flex flex-col justify-end p-12 overflow-hidden group">
+        <div className="relative aspect-square flex flex-col justify-end p-12 overflow-hidden group border-r border-white/5">
           <img 
-            src="https://images.unsplash.com/photo-1544274433-07ec760882ef?q=80&w=1200&auto=format&fit=crop" 
-            className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-1000"
+            src="https://images.unsplash.com/photo-1544274433-07ec760882ef?q=80&w=1200&auto=format&fit=crop&grayscale=true" 
+            className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-1000"
             alt="Quest 5"
           />
           <div className="relative z-10 space-y-6">
@@ -85,8 +132,8 @@ export function HomePage() {
 
         <div className="relative aspect-square flex flex-col justify-end p-12 overflow-hidden group">
           <img 
-            src="https://images.unsplash.com/photo-1516589170761-7bf54093c834?q=80&w=1200&auto=format&fit=crop" 
-            className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-1000"
+            src="https://images.unsplash.com/photo-1516589170761-7bf54093c834?q=80&w=1200&auto=format&fit=crop&grayscale=true" 
+            className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-1000"
             alt="Pink Capsule"
           />
           <div className="relative z-10 space-y-6">
@@ -126,6 +173,69 @@ export function HomePage() {
                 </div>
               </Link>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Most Searched Categories - Simple List */}
+      <section className="py-20 px-6 bg-white text-black border-t border-black/5">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-[10px] font-black uppercase tracking-[0.4em] mb-12 opacity-40">Catégories les plus recherchées</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-12 gap-y-4">
+            {[
+              'Chaussures de randonnée pour homme',
+              'Chaussures de running pour homme',
+              'Chaussures de trail running pour homme',
+              'Chaussures de randonnée pour femme',
+              'Chaussures de running pour femme',
+              'Chaussures de trail pour femme',
+              'Chaussures de ski alpin',
+              'Vêtements de ski alpin',
+              'Chaussures de ski de fond',
+              'Sacs et housses pour la randonnée',
+              'Vêtements de randonnée',
+              'Chaussures de randonnée',
+              'Sacs et sacs à dos de running',
+              'Vêtements de course à pied',
+              'Chaussures de course à pied',
+              'Chaussures de snowboard',
+              'Snowboards',
+              'Sacs de running',
+              'Vêtements de trail',
+              'Chaussures de trail'
+            ].map((cat) => (
+              <Link key={cat} to="/collection" className="text-xs font-bold uppercase tracking-tight hover:underline transition-all">
+                {cat}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* The Lab / Performance Section */}
+      <section className="py-40 px-6 bg-black text-white relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-1/2 h-full opacity-10">
+          <img 
+            src="https://images.unsplash.com/photo-1532444458054-01a7dd3e9fca?q=80&w=1200&auto=format&fit=crop&grayscale=true" 
+            className="w-full h-full object-cover"
+            alt="Technical Detail"
+          />
+        </div>
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+            <div className="space-y-10">
+              <h2 className="text-7xl md:text-9xl italic font-black uppercase tracking-tighter leading-[0.8]">The<br/>Laboratory</h2>
+              <p className="text-xl font-medium text-zinc-400 max-w-sm leading-relaxed">
+                Là où la science rencontre le bitume. Nous testons nos limites pour que vous puissiez repousser les vôtres. Rejoignez le club.
+              </p>
+              <div className="flex space-x-6">
+                <button className="bg-white text-black px-10 py-5 font-black uppercase text-xs tracking-widest hover:bg-zinc-200 transition-all">
+                  Voir les tests
+                </button>
+                <button className="border border-white/20 px-10 py-5 font-black uppercase text-xs tracking-widest hover:bg-white/10 transition-all">
+                  Nos athlètes
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </section>

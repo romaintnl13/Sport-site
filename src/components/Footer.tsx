@@ -57,17 +57,19 @@ export function Footer() {
 
         <div className="flex flex-col justify-between">
           <div>
-            <h4 className="text-[10px] uppercase font-black tracking-widest text-zinc-500 mb-6">Communauté</h4>
-            <div className="flex space-x-4">
-              {['IN', 'TW', 'FB'].map((item) => (
-                <Link key={item} to="#" className="text-sm font-black border border-white/20 w-10 h-10 flex items-center justify-center hover:bg-white hover:text-black transition-all">
-                  {item}
-                </Link>
+            <h4 className="text-[10px] uppercase font-black tracking-widest text-zinc-500 mb-6">NYFORTEL</h4>
+            <ul className="space-y-3">
+              {['Services', 'Légal', 'Développement Durable', 'Livraison'].map((item) => (
+                <li key={item}>
+                  <Link to="#" className="text-sm font-bold uppercase tracking-tight hover:opacity-50 transition-opacity text-zinc-400">
+                    {item}
+                  </Link>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
           <p className="text-[10px] font-mono text-zinc-600 mt-12">
-            © 2024 NYFORTEL_CLUB LABORATORY. ALL RIGHTS RESERVED.
+            © 2024 NYFORTEL_CLUB LABORATORY. FRANCE.
           </p>
         </div>
       </div>
