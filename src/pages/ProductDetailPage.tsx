@@ -48,7 +48,12 @@ export function ProductDetailPage() {
             <div className="space-y-12">
               <div className="space-y-4">
                 <div className="flex justify-between items-baseline">
-                  <h1 className="text-6xl md:text-8xl italic font-black leading-none">{product.name}</h1>
+                  <div className="flex flex-col">
+                    {product.isMemberExclusive && (
+                      <span className="text-[10px] font-black uppercase tracking-widest text-zinc-500 mb-2">Exclusivité membres S/PLUS</span>
+                    )}
+                    <h1 className="text-6xl md:text-8xl italic font-black leading-none">{product.name}</h1>
+                  </div>
                   <span className="text-2xl font-mono">{product.price}</span>
                 </div>
                 <p className="text-[10px] tracking-widest font-black uppercase text-black/40">{product.category}</p>
@@ -62,7 +67,7 @@ export function ProductDetailPage() {
                 <div className="space-y-4">
                   <h4 className="inline-flex items-center space-x-2 text-[10px] font-black uppercase tracking-widest">
                     <Info size={14} strokeWidth={3} />
-                    <span>Technical Architecture</span>
+                    <span>Architecture Technique</span>
                   </h4>
                   <ul className="space-y-2 border-t border-black/10 pt-4">
                     {product.technicalSpecs.map((spec, i) => (
@@ -77,7 +82,7 @@ export function ProductDetailPage() {
 
               <div className="space-y-6 pt-12">
                 <div className="flex items-center space-x-4">
-                   {['XS', 'S', 'M', 'L', 'XL'].map((size) => (
+                   {['36', '38', '40', '42', '44', '46'].map((size) => (
                      <button key={size} className="flex-1 border-2 border-black/10 py-4 text-xs font-black hover:border-black transition-colors focus:bg-black focus:text-white">
                        {size}
                      </button>
@@ -85,20 +90,20 @@ export function ProductDetailPage() {
                 </div>
 
                 <button className="w-full bg-black text-white py-6 font-black uppercase tracking-[0.2em] hover:opacity-80 transition-opacity flex items-center justify-center space-x-4">
-                  <span>Add to Mission</span>
+                  <span>Ajouter au panier</span>
                   <ArrowRight size={20} />
                 </button>
                 
                 <button className="w-full border-2 border-black py-4 font-black uppercase tracking-[0.2em] text-[10px] flex items-center justify-center space-x-2 hover:bg-black hover:text-white transition-all">
                   <Share2 size={14} />
-                  <span>Encrypted Share</span>
+                  <span>Encrypted Coordinates</span>
                 </button>
               </div>
             </div>
 
             <div className="mt-20 pt-10 border-t border-black/5 flex justify-between items-center text-[10px] font-mono text-black/40 uppercase tracking-widest">
-              <span>REF: 2948-ALPHA-PRO</span>
-              <span>DESIGNED IN BEAVERTON, OR</span>
+              <span>REF: {product.id.toUpperCase()}-STABLE</span>
+              <span>DESIGNED FOR THE ALPS</span>
             </div>
           </div>
         </div>

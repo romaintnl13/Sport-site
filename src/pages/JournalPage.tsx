@@ -8,10 +8,10 @@ export function JournalPage() {
     <main className="pt-32 pb-40 px-6 bg-zinc-950 min-h-screen">
       <div className="max-w-4xl mx-auto">
         <header className="mb-32 space-y-8">
-          <h1 className="text-8xl md:text-[12rem] italic leading-none text-white/5 absolute left-0 w-full text-center pointer-events-none select-none">JOURNAL</h1>
+          <h1 className="text-8xl md:text-[12rem] italic leading-none text-white/5 absolute left-0 w-full text-center pointer-events-none select-none">EXPEDITION</h1>
           <div className="relative z-10 text-center space-y-6 pt-20">
-            <h2 className="text-4xl md:text-6xl italic font-black uppercase tracking-tighter">LAB NOTES & RESEARCH</h2>
-            <p className="text-zinc-500 font-bold uppercase tracking-widest text-[10px]">Documenting the edge of human capability.</p>
+            <h2 className="text-4xl md:text-6xl italic font-black uppercase tracking-tighter">FIELD NOTES & LOGS</h2>
+            <p className="text-zinc-500 font-bold uppercase tracking-widest text-[10px]">Documenting the edge of high-altitude utility.</p>
           </div>
         </header>
 
@@ -28,7 +28,7 @@ export function JournalPage() {
               <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
                 <div className="md:col-span-8 overflow-hidden aspect-[16/9] bg-zinc-900">
                   <img 
-                    src={`https://picsum.photos/seed/journal${entry.id}/1200/800?grayscale`}
+                    src={`https://images.unsplash.com/photo-1516589170761-7bf54093c834?q=80&w=1200&auto=format&fit=crop&seed=${entry.id}`}
                     alt={entry.title}
                     className="w-full h-full object-cover opacity-50 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105"
                     referrerPolicy="no-referrer"

@@ -6,63 +6,104 @@ export interface Product {
   description: string;
   technicalSpecs: string[];
   imageUrl: string;
+  isMemberExclusive?: boolean;
 }
 
 export const PRODUCTS: Product[] = [
   {
-    id: "aeroadapt-top",
-    name: "AeroAdapt Ultra 2.0",
-    category: "Upper Layer",
-    price: "€85.00",
-    description: "Dynamic moisture management system that activates as you sweat, increasing airflow to prevent overheating during high-intensity training.",
+    id: "grvl-concept",
+    name: "GRVL Concept",
+    category: "Gravel Running",
+    price: "€220.00",
+    description: "Allez plus loin que l’asphalte, avec la puissance des plaques carbone. Conçue pour une efficacité maximale sur terrain mixte.",
     technicalSpecs: [
-      "Targeted ventilation in high-heat zones",
-      "Ergonomic fit for full range of motion",
-      "Moisture-wicking AeroAdapt panels"
+      "Plaque Energy Blade carbone",
+      "Mousse Energy Surge ultralégère",
+      "Semelle Contagrip All-Terrain"
     ],
-    imageUrl: "https://picsum.photos/seed/nike1/800/1000?grayscale"
+    imageUrl: "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?q=80&w=800&auto=format&fit=crop"
   },
   {
-    id: "pro-leggings",
-    name: "Compression Prime",
-    category: "Performance Bottoms",
-    price: "€65.00",
-    description: "Locked-in support with targeted compression zones to improve blood flow and muscle recovery speed.",
+    id: "xt-6-black",
+    name: "XT-6",
+    category: "Sportstyle",
+    price: "€180.00",
+    description: "L'icône du trail running réimaginée pour la ville. Un mélange parfait de performance technique et de design minimaliste.",
     technicalSpecs: [
-      "Graduated compression technology",
-      "Flat-lock seams for zero distraction",
-      "Reinforced knee articulation"
+      "Système Quicklace™",
+      "Amorti EVA double densité",
+      "Construction SensiFit™ sécurisée"
     ],
-    imageUrl: "https://picsum.photos/seed/nike2/800/1000?grayscale"
+    imageUrl: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=800&auto=format&fit=crop"
   },
   {
-    id: "swift-shorts",
-    name: "Swift Aero 5\"",
-    category: "Training Shorts",
-    price: "€45.00",
-    description: "Ultralight laser-cut fabric designed for explosive speed. The minimal weight ensures maximum agility.",
+    id: "xt-6-gtx",
+    name: "XT-6 GORE-TEX",
+    category: "Trail running",
+    price: "€200.00",
+    description: "Protection intégrale contre les éléments avec la membrane GORE-TEX. Pour ceux qui ne s'arrêtent jamais.",
     technicalSpecs: [
-      "Perforated breathable waistband",
-      "Water-repellent finish",
-      "Reflective detailing for low light"
+      "Membrane ePE GORE-TEX",
+      "Pare-boue protecteur",
+      "Châssis ACS stable"
     ],
-    imageUrl: "https://picsum.photos/seed/nike3/800/1000?grayscale"
+    imageUrl: "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    id: "xt-whisper",
+    name: "XT-WHISPER",
+    category: "Sportstyle",
+    price: "€150.00",
+    description: "Une silhouette légère et aérienne. Exclusivité membres S/PLUS.",
+    isMemberExclusive: true,
+    technicalSpecs: [
+      "Mesh ultra-respirant",
+      "Lignes de design épurées",
+      "Confort quotidien supérieur"
+    ],
+    imageUrl: "https://images.unsplash.com/photo-1539185441755-769473a23570?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    id: "xt-4-og",
+    name: "XT-4 OG",
+    category: "Course à pied",
+    price: "€190.00",
+    description: "Retour aux sources. La fidélité absolue au modèle original qui a défini le trail moderne.",
+    technicalSpecs: [
+      "Squelette TPU résistant",
+      "Semelle externe géométrique",
+      "Coloris archives authentiques"
+    ],
+    imageUrl: "https://images.unsplash.com/photo-1549298916-b41d501d3772?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    id: "xa-pro-3d",
+    name: "XA PRO 3D V9 GORE-TEX",
+    category: "Randonnée",
+    price: "€170.00",
+    description: "La stabilité légendaire. La chaussure de randonnée incontournable pour les terrains les plus techniques.",
+    technicalSpecs: [
+      "3D Advanced Chassis™",
+      "GORE-TEX imperméable",
+      "Renfort pare-pierres ultra-robuste"
+    ],
+    imageUrl: "https://images.unsplash.com/photo-1520639889313-727216af39ae?q=80&w=800&auto=format&fit=crop"
   }
 ];
 
 export const JOURNAL_ENTRIES = [
   {
     id: "1",
-    title: "The Science of AeroAdapt",
-    date: "JAN 24, 2024",
-    excerpt: "Deep dive into the molecular triggers that open ventilation ports during peak anaerobic output.",
-    category: "LAB"
+    title: "Gravel Running Revolution",
+    date: "AVR 12, 2024",
+    excerpt: "Comment les plaques carbone redéfinissent la vitesse sur les chemins de gravier.",
+    category: "INNOVATION"
   },
   {
     id: "2",
-    title: "Breaking the 2-Hour Barrier",
-    date: "DEC 12, 2023",
-    excerpt: "How iterative engineering in textile weight contributed to the ultimate marathon performance.",
-    category: "PERFORMANCE"
+    title: "Eco-Quest 5 Silhouette",
+    date: "MAR 28, 2024",
+    excerpt: "Conception durable : tenir la distance tout en respectant l'environnement.",
+    category: "SUSTAINABILITY"
   }
 ];

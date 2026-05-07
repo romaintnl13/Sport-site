@@ -11,10 +11,10 @@ export function CollectionPage() {
           <h1 className="text-8xl md:text-[10rem] leading-[0.8] tracking-tighter italic">EQUIPMENT</h1>
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
             <p className="text-xl font-medium max-w-md text-zinc-400">
-              High-intensity systems designed for the rigors of elite competition.
+              Technical solutions for high-altitude environments. Niche quantities, engineered for the few.
             </p>
             <div className="flex space-x-8">
-              {['All', 'Tops', 'Bottoms', 'Accessories'].map((cat) => (
+              {['Tout', 'Gravel', 'Trail', 'Route', 'Randonnée'].map((cat) => (
                 <button key={cat} className="text-[10px] uppercase font-black tracking-widest text-white/40 hover:text-white transition-colors">
                   {cat}
                 </button>
@@ -41,8 +41,13 @@ export function CollectionPage() {
                     className="w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-110"
                     referrerPolicy="no-referrer"
                   />
-                  <div className="absolute top-6 left-6 mix-blend-difference">
-                    <span className="text-[8px] tracking-[0.4em] font-black uppercase text-white opacity-40">Series 0.1 / P{index + 1}</span>
+                  {product.isMemberExclusive && (
+                    <div className="absolute top-4 left-4 bg-black text-white text-[8px] font-black uppercase px-2 py-1 tracking-widest z-10">
+                      Exclusivité membres
+                    </div>
+                  )}
+                  <div className="absolute top-6 right-6 mix-blend-difference">
+                    <span className="text-[8px] tracking-[0.4em] font-black uppercase text-white opacity-40">NYF / 0{index + 1}</span>
                   </div>
                   <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm">
                     <span className="text-xs font-black uppercase tracking-[0.5em] border border-white px-8 py-4">View Specs</span>
