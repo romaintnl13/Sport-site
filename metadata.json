@@ -1,0 +1,10 @@
+{
+  "name": "NIKE PRO",
+  "description": "High-performance athletic interface featuring the AeroAdapt Ultra 2.0 collection with technical precision and minimalist design.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "geolocation"
+  ],
+  "majorCapabilities": []
+}
